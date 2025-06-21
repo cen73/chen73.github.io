@@ -23,13 +23,29 @@
         <a href="http://58.50.22.13:9090/eams/homeExt.action">荆州理工教务系统</a>
     </div>
 
+
+
     <script>
+        // 页面加载开始时记录时间（使用 jQuery 包裹是为了确保 DOM 就绪）
+        let startTime = Date.now();
+
         $(window).on("load", function () {
-            $(".load").fadeOut("slow", function () {
-                $("body").css("overflow", "auto");
-            });
+            let endTime = Date.now();
+            let elapsed = endTime - startTime;
+            let minimumTime = 300; // 设置最短显示时间：2秒（2000ms）
+
+            let remainingTime = minimumTime - elapsed;
+
+            // 如果加载时间已经超过2秒，直接淡出；否则等够时间再淡出
+            setTimeout(function () {
+                $(".load").fadeOut("slow", function () {
+                    $("body").css("overflow", "auto"); // 恢复滚动（可选）
+                });
+            }, remainingTime > 0 ? remainingTime : 0);
         });
     </script>
+
+
 
 </body>
 
