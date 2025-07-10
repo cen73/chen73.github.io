@@ -1,93 +1,152 @@
-body {
-    margin: 0;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url('https://t.alcy.cc/fj');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    font-family: 'Montserrat', sans-serif;
+<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-webfont/1.6.0/style.min.css" />
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/style.min.css" />
 
-}
 
-.load {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: #e8e8e8; */
-    background-color: #ddd;
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-}
-
-.loader {
-    width: 48px;
-    height: 48px;
-    position: relative;
-}
-
-.loader::before {
-    content: '';
-    width: 48px;
-    height: 5px;
-    background: #f0808050;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    border-radius: 50%;
-    animation: shadow01 0.5s linear infinite;
-}
-
-.loader::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: #f08080;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 4px;
-    animation: jump01 0.5s linear infinite;
-}
-
-@keyframes jump01 {
-    15% {
-        border-bottom-right-radius: 3px;
+<style>
+    
+    #scroll-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 4px;
+        background-color: rgb(24, 144, 255);
+        z-index: 9999;
+        transition: width 0.1s ease-out;
     }
 
-    25% {
-        transform: translateY(9px) rotate(22.5deg);
+    .left-toolbar.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-ijgzmFG-css {
+        background-color: rgba(255, 255, 255, 0.6);
+
     }
 
-    50% {
-        transform: translateY(18px) scale(1, 0.9) rotate(45deg);
-        border-bottom-right-radius: 40px;
+    div#hope-menu-cl-44-content {
+        background-color: rgba(255, 255, 255, 0.5);
+
     }
 
-    75% {
-        transform: translateY(9px) rotate(67.5deg);
+    * {
+        /* 原版 */
+        font-family: "LXGW WenKai", sans-serif;
+        /* 屏幕优化版 */
+        font-family: "LXGW WenKai Screen", sans-serif;
+        font-weight: 650;
     }
 
-    100% {
-        transform: translateY(0) rotate(90deg);
-    }
-}
+    .obj-box.hope-stack.hope-c-dhzjXW.hope-c-PJLV.hope-c-PJLV-igScBhH-css {
+        background-color: rgba(255, 255, 255, 0.5);
 
-@keyframes shadow01 {
-
-    0%,
-    100% {
-        transform: scale(1, 1);
     }
 
-    50% {
-        transform: scale(1.2, 1);
+    .hope-c-PJLV-ikaMhsQ-css {
+        background: rgba(255, 255, 255, 0) !important;
     }
-}
+
+    .hope-ui-light .hope-c-PJLV-idaeksS-css {
+        background-color: rgba(255, 255, 255, 0.5) !important;
+        border-radius: 10px !important;
+
+    }
+
+    body {
+        background-image: url('https://api.mtyqx.cn/tapi/random.php');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .load {
+        margin: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: #e8e8e8; */
+        background-color: #ddd;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+    }
+
+    .loader {
+        width: 48px;
+        height: 48px;
+        position: relative;
+    }
+
+    .loader::before {
+        content: '';
+        width: 48px;
+        height: 5px;
+        background: #f0808050;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        border-radius: 50%;
+        animation: shadow01 0.5s linear infinite;
+    }
+
+    .loader::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: #f08080;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 4px;
+        animation: jump01 0.5s linear infinite;
+    }
+
+    @keyframes jump01 {
+        15% {
+            border-bottom-right-radius: 3px;
+        }
+
+        25% {
+            transform: translateY(9px) rotate(22.5deg);
+        }
+
+        50% {
+            transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+            border-bottom-right-radius: 40px;
+        }
+
+        75% {
+            transform: translateY(9px) rotate(67.5deg);
+        }
+
+        100% {
+            transform: translateY(0) rotate(90deg);
+        }
+    }
+
+    @keyframes shadow01 {
+
+        0%,
+        100% {
+            transform: scale(1, 1);
+        }
+
+        50% {
+            transform: scale(1.2, 1);
+        }
+    }
+</style>
+
+<body>
+    <div class="load">
+        <div class="loader" aria-hidden="true"></div>
+    </div>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        $(".load").fadeOut("slow");
+    });
+</script>
